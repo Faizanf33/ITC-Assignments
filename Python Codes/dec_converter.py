@@ -19,8 +19,8 @@ def dec_conv():
     d = {
         'b' : 2, 'x' : 16, 'o' : 8, 10 : 'A', 11 : 'B', 12 : 'C', 13 : 'D' , 14 : 'E', 15 : 'F'
     }
+    print (':: Converter ::')
     num = input('Enter a number: ')
-    formt = input('Convert to (dec, hex, oct): ')
 
     if not num.isdigit():
         return 'Number Must Be An Integer!, for further guide, see help(dec_conv)'
@@ -28,12 +28,18 @@ def dec_conv():
     else:
         num = int(num)
 
+    formt = input('Convert to (bin, oct, hex): ')
+
+
     try:
         if (formt[0] == 'b') or (formt[0] == 'o'):
             c = ('b' if (formt[0] == 'b') else 'o')
 
-        else:
+        elif (formt[0] == 'h'):
             c = 'x'
+
+        else:
+            c = None
 
         formt = d[c]
 
