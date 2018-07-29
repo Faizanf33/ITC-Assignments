@@ -31,7 +31,7 @@ def Factorial(n):
     return factorial
 
 
-n = input("Enter a number : ")
+n = float(input("Enter a number : "))
 print (Factorial(n))
 
 
