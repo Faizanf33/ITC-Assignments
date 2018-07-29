@@ -1,11 +1,6 @@
 import os
 os.system('cls' if os.name=='nt' else 'clear')
 
-try:
-    input = raw_input
-
-except:
-    pass
 
 def calculator():
     C_Menu = input("-- Calculator Menu -- \n\n0. Quit \n1. Add two numbers \n2. Subtract two numbers \n3. Multiply two numbers \n4. Divide two numbers \n5. Square a number \n6. Square root a number \n7. Factorial of a number \n8. Fib of a number \n\nEntry = ")
