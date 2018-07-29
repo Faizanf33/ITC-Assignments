@@ -8,7 +8,7 @@ except:
 def num_to_words():
     try:
         from num2words import num2words
-        n = input("Enter a number: ")
+        n = int(input("Enter a number: "))
         d = {}
         for i in range(0 , n+1):
             d[i] = str(num2words(i))
