@@ -1,9 +1,3 @@
-try:
-    input = raw_input
-
-except:
-    pass
-
 def Operations():
     N = input("Enter number of variables 1 or 2 or 3 = ")
 
