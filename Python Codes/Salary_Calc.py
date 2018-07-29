@@ -7,9 +7,9 @@ except:
 
 def salary_calculator():
     Total_Sal = 0
-    Sal = input("Enter salary in $ ")
+    Sal = float(input("Enter salary in $ "))
     Total_Sal += Sal
-    Experience = int(input("Enter Year's of Experience "))
+    Experience = float(input("Enter Year's of Experience "))
     if Experience <= 5:
         Exp = 10 * Experience
 	print ("Bonus = $",Exp)
@@ -18,7 +18,7 @@ def salary_calculator():
         Exp = (10 * 5) + ((Experience - 5) * 20)
 	print ("Bonus = $",Exp)
         Total_Sal += Exp
-    Com = round(input ("Enter Sale Amount "))
+    Com = round(float(input ("Enter Sale Amount ")))
     if Com >= 5000 and Com < 10000:
         com = round(Com * 0.03)
         print ("Commision = $",com)
@@ -28,7 +28,7 @@ def salary_calculator():
         print ("Commision = $",com)
         Total_Sal += com
     else:
-        (print "Commission = $ 0.0")
+        print ("Commission = $ 0.0")
     print ("Total Salary = $",Total_Sal)
 
 
