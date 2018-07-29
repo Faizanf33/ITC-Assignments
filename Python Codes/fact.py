@@ -7,7 +7,7 @@ except:
     pass
 
 def factorialW():
-	n = input("Input a number: ")
+	n = float(input("Input a number: "))
 	fac = 1
 	i = 1
 	while i <= n:
@@ -20,7 +20,7 @@ def factorialW():
 
 
 def FactorialR():
-	n = input("Input a number: ")
+	n = float(input("Input a number: "))
 	factorial = 1
 	for i in range(1,n+1):
         	factorial = factorial * i
