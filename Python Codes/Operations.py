@@ -1,3 +1,9 @@
+try:
+    input = raw_input
+
+except:
+    pass
+
 def Operations():
     N = input("Enter number of variables 1 or 2 or 3 = ")
 
@@ -19,7 +25,7 @@ def Operations():
             else:
                 return None
         else:
-            print "You have entered wrong operation!"
+            print ("You have entered wrong operation!")
 
     elif N == 2:
         X = bool(input("Enter 1 or 0 as first variable = "))
@@ -42,7 +48,7 @@ def Operations():
             else:
                 return None
         else:
-            print "You have entered a wrong operation!"
+            print ("You have entered a wrong operation!")
 
     elif N == 3:
         X = bool(input("Enter 1 or 0 as first variable = "))
@@ -66,10 +72,10 @@ def Operations():
             else:
                 return None
         else:
-            print "You have entered a wrong operation or wrong digit!"
+            print ("You have entered a wrong operation or wrong digit!")
     else:
         raise ValueError ("You have exceeded limit of variables!")
 
 
 
-print Operations()
+print (Operations())

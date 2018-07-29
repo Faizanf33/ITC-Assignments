@@ -1,16 +1,33 @@
+try:
+		input = raw_input
+except:
+		pass
+
+
 def count_char(text, char):
     count = 0
     for c in text:
         if c == char:
             count += 1
     return count
+print("Character count plus percentage")
+filename = input("ENTER VALID FILENAME OR PATH >> ")
 
-filename = "About.txt"
-with open(filename) as f:
-    text = f.read()
+try:
+    with open(filename) as f:
+        text = f.read()
+        
+    print("================CHARACTERS IN FILE : {}=================".format(filename))
+    
+    for char in "abcdefghijklmnopqrstuvwxyz":
+    		print ("{} = {}".format(char, str(count_char(text, char))))
+    		
+    print("================CHARACTER PERCENTAGE IN FILE : {}============".format(filename))
 
-print [ "{} = {}".format(char, str(count_char(text, char))) for char in "abcdefghijklmnopqrstuvwxyz"]
+    for char in "abcdefghijklmnopqrstuvwxyz":
+        perc = 100 * count_char(text, char) / len(text)
+        print("{0} = {1}%".format(char, round(perc, 2)))
 
-for char in "abcdefghijklmnopqrstuvwxyz":
-    perc = 100 * count_char(text, char) / len(text)
-    print("{0} = {1}%".format(char, round(perc, 2)))
+except FileNotFoundError:
+    print("INVALID FILENAME OR PATH!")
+

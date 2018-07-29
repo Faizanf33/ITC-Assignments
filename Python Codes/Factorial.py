@@ -1,4 +1,12 @@
 from time import clock
+
+try:
+    input = raw_input
+
+except:
+    pass
+
+
 def Factorial(n):
     """Computes the factorial of a number.
 
@@ -19,10 +27,12 @@ def Factorial(n):
     factorial = 1
     for i in range(1,n+1):
         factorial = factorial * i
-    print clock()
+    print (clock())
     return factorial
 
-print Factorial(15)
+
+n = input("Enter a number : ")
+print (Factorial(n))
 
 
 
